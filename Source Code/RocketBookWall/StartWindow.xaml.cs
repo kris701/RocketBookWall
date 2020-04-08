@@ -22,16 +22,7 @@ namespace RocketBookWall
     /// </summary>
     public partial class StartWindow : Window
     {
-        public class SaveData
-        {
-            public double Width { get; set; }
-            public double Height { get; set; }
-            public double X { get; set; }
-            public double Y { get; set; }
-            public string Folder { get; set; }
-        }
-
-        public List<SaveData> WindowData = new List<SaveData>();
+        public List<ParseWindowData.SaveData> WindowData = new List<ParseWindowData.SaveData>();
         public List<PDFViewItem> WindowReferences = new List<PDFViewItem>();
 
         public StartWindow()
@@ -78,10 +69,10 @@ namespace RocketBookWall
 
             foreach (string Cut in CutA)
             {
-                SaveDataToList(Cut);
+                WindowData = ParseWindowData.SaveDataToList(Cut, WindowData);
             }
 
-            foreach (SaveData Data in WindowData)
+            foreach (ParseWindowData.SaveData Data in WindowData)
             {
                 PDFViewItem NewWindow = new PDFViewItem(this, Data);
                 WindowReferences.Add(NewWindow);
@@ -104,7 +95,7 @@ namespace RocketBookWall
 
         public void AddNewWindow()
         {
-            SaveData saveData = new SaveData();
+            ParseWindowData.SaveData saveData = new ParseWindowData.SaveData();
             saveData.Width = 300;
             saveData.Height = 420;
             saveData.X = 10;
@@ -116,52 +107,6 @@ namespace RocketBookWall
             PDFViewItem NewWindow = new PDFViewItem(this, saveData);
             WindowReferences.Add(NewWindow);
             NewWindow.Show();
-        }
-
-        private void SaveDataToList(string Data)
-        {
-            if (Data != "")
-            {
-                string[] SplitData = Data.Split(',');
-
-                SaveData saveData = new SaveData();
-
-                if (SplitData.Length == 5)
-                {
-                    saveData.Width = Convert.ToDouble(SplitData[0]);
-                    saveData.Height = Convert.ToDouble(SplitData[1]);
-                    saveData.X = Convert.ToDouble(SplitData[2]);
-                    saveData.Y = Convert.ToDouble(SplitData[3]);
-                    saveData.Folder = SplitData[4];
-                }
-
-                WindowData.Add(saveData);
-            }
-        }
-
-        public void UpdateListItem(SaveData Item)
-        {
-            WindowData[WindowData.IndexOf(Item)].Width = Item.Width;
-            WindowData[WindowData.IndexOf(Item)].Height = Item.Height;
-            WindowData[WindowData.IndexOf(Item)].X = Item.X;
-            WindowData[WindowData.IndexOf(Item)].Y = Item.Y;
-            WindowData[WindowData.IndexOf(Item)].Folder = Item.Folder;
-        }
-
-        public void RemoveListItem(SaveData Item)
-        {
-            WindowData.Remove(Item);
-        }
-
-        private void SaveDataToSettings()
-        {
-            string OutString = "";
-            foreach (SaveData Data in WindowData)
-            {
-                OutString += Data.Width + "," + Data.Height + "," + Data.X + "," + Data.Y + "," + Data.Folder + ";";
-            }
-            Properties.Settings.Default.WindowData = OutString;
-            Properties.Settings.Default.Save();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -182,10 +127,75 @@ namespace RocketBookWall
                     }
                 }
 
-                SaveDataToSettings();
+                ParseWindowData.SaveDataToSettings(WindowData);
 
                 this.Close();
             }
+        }
+    }
+
+    public class ParseWindowData
+    {
+        public class SaveData
+        {
+            public double Width { get; set; }
+            public double Height { get; set; }
+            public double X { get; set; }
+            public double Y { get; set; }
+            public string Folder { get; set; }
+        }
+
+        public static List<SaveData> SaveDataToList(string Data, List<SaveData> WindowData)
+        {
+            if (Data != "")
+            {
+                string[] SplitData = Data.Split(',');
+
+                SaveData saveData = new SaveData();
+
+                if (SplitData.Length == 5)
+                {
+                    saveData.Width = Convert.ToDouble(SplitData[0]);
+                    saveData.Height = Convert.ToDouble(SplitData[1]);
+                    saveData.X = Convert.ToDouble(SplitData[2]);
+                    saveData.Y = Convert.ToDouble(SplitData[3]);
+                    saveData.Folder = SplitData[4];
+                }
+
+                WindowData.Add(saveData);
+            }
+
+            return WindowData;
+        }
+
+
+        public static List<SaveData> UpdateListItem(SaveData Item, List<SaveData> WindowData)
+        {
+            WindowData[WindowData.IndexOf(Item)].Width = Item.Width;
+            WindowData[WindowData.IndexOf(Item)].Height = Item.Height;
+            WindowData[WindowData.IndexOf(Item)].X = Item.X;
+            WindowData[WindowData.IndexOf(Item)].Y = Item.Y;
+            WindowData[WindowData.IndexOf(Item)].Folder = Item.Folder;
+
+            return WindowData;
+        }
+
+        public static List<SaveData> RemoveListItem(SaveData Item, List<SaveData> WindowData)
+        {
+            WindowData.Remove(Item);
+
+            return WindowData;
+        }
+
+        public static void SaveDataToSettings(List<SaveData> WindowData)
+        {
+            string OutString = "";
+            foreach (SaveData Data in WindowData)
+            {
+                OutString += Data.Width + "," + Data.Height + "," + Data.X + "," + Data.Y + "," + Data.Folder + ";";
+            }
+            Properties.Settings.Default.WindowData = OutString;
+            Properties.Settings.Default.Save();
         }
     }
 }

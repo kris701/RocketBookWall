@@ -25,10 +25,10 @@ namespace RocketBookWall
         private DateTime LastUpdate = new DateTime();
         private bool IsDoneLoading = false;
         private StartWindow StartWindowRef;
-        private StartWindow.SaveData WindowData;
+        private ParseWindowData.SaveData WindowData;
         public bool ShuttingDown = false;
 
-        public PDFViewItem(StartWindow _StartWindowRef, StartWindow.SaveData _WindowData)
+        public PDFViewItem(StartWindow _StartWindowRef, ParseWindowData.SaveData _WindowData)
         {
             InitializeComponent();
 
@@ -39,7 +39,7 @@ namespace RocketBookWall
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
             WindowData.Folder = TargetFolder.Text;
-            StartWindowRef.UpdateListItem(WindowData);
+            ParseWindowData.UpdateListItem(WindowData, StartWindowRef.WindowData);
             ForceUpdate = true;
         }
 
@@ -49,7 +49,7 @@ namespace RocketBookWall
             {
                 WindowData.Height = this.ActualHeight;
                 WindowData.Width = this.ActualWidth;
-                StartWindowRef.UpdateListItem(WindowData);
+                ParseWindowData.UpdateListItem(WindowData, StartWindowRef.WindowData);
             }
         }
 
@@ -118,7 +118,7 @@ namespace RocketBookWall
                 WindowData.Width = this.ActualWidth;
                 WindowData.X = this.Left;
                 WindowData.Y = this.Top;
-                StartWindowRef.UpdateListItem(WindowData);
+                ParseWindowData.UpdateListItem(WindowData, StartWindowRef.WindowData);
 
                 if (!ShuttingDown)
                     StartWindowRef.CloseAllWindows(this);
@@ -154,7 +154,7 @@ namespace RocketBookWall
 
         private void YesRemoveButton_Click(object sender, RoutedEventArgs e)
         {
-            StartWindowRef.RemoveListItem(WindowData);
+            ParseWindowData.RemoveListItem(WindowData, StartWindowRef.WindowData);
             IsDoneLoading = false;
             this.Close();
         }
