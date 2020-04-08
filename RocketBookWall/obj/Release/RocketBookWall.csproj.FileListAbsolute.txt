@@ -1,0 +1,16 @@
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\bin\Release\RocketBookWall.exe.config
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\bin\Release\RocketBookWall.exe
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\bin\Release\RocketBookWall.pdb
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\PDFViewItem.g.cs
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\StartWindow.g.cs
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\App.g.cs
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall_MarkupCompile.cache
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall_MarkupCompile.lref
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\PDFViewItem.baml
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\StartWindow.baml
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall.g.resources
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall.Properties.Resources.resources
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall.csproj.GenerateResource.cache
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall.csproj.CoreCompileInputs.cache
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall.exe
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Release\RocketBookWall.pdb

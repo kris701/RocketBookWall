@@ -1,0 +1,17 @@
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\bin\Debug\RocketBookWall.exe.config
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\bin\Debug\RocketBookWall.exe
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\bin\Debug\RocketBookWall.pdb
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\App.g.cs
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall_MarkupCompile.cache
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall_MarkupCompile.lref
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall.g.resources
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall.Properties.Resources.resources
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall.csproj.GenerateResource.cache
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall.csproj.CoreCompileInputs.cache
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall.exe
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall.pdb
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\StartWindow.g.cs
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\StartWindow.baml
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\PDFViewItem.g.cs
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\PDFViewItem.baml
+C:\Users\kris7\OneDrive\Programming\_ GitHub _\RocketBookWall\GitHub\RocketBookWall\RocketBookWall\obj\Debug\RocketBookWall.csprojAssemblyReference.cache

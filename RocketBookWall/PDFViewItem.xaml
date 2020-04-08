@@ -1,0 +1,48 @@
+﻿<Window x:Class="RocketBookWall.PDFViewItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RocketBookWall"
+        mc:Ignorable="d"
+        Title="RocketBookWall" Height="420" Width="300" MinHeight="420" MinWidth="300" Loaded="Window_Loaded" SizeChanged="Window_SizeChanged" Icon="logo.ico" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="25"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="TargetFolder"/>
+        <Button x:Name="RefreshButton" Grid.Column="1" Content="&#x27f2;" Background="#FF2E4A72" FontWeight="Bold" Foreground="White" Click="RefreshButton_Click"/>
+        <Button x:Name="AddNewButton" Grid.Column="2" Content="+" Background="#FF2E4A72" FontWeight="Bold" Foreground="White" Click="AddNewButton_Click"/>
+        <Button x:Name="RemoveThisButton" Grid.Column="3" Content="X" Background="#FFA82E2E" FontWeight="Bold" Foreground="White" Click="RemoveThisButton_Click"/>
+
+        <WebBrowser x:Name="pdfWebViewer" Grid.ColumnSpan="4" Grid.Row="1"></WebBrowser>
+
+        <Grid Background="Gray" x:Name="AreYouSureGrid" Grid.Row="1" Grid.ColumnSpan="4" Visibility="Hidden">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="1" Grid.Column="1" Content="Are you sure you want to remove this note?" Foreground="White" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="YesRemoveButton" Grid.Row="2" Grid.Column="1" Content="Yes" Background="#FFA82E2E" FontWeight="Bold" Foreground="White" Click="YesRemoveButton_Click"/>
+            <Button x:Name="NoDontRemoveButton" Grid.Row="3" Grid.Column="1" Content="No" Background="#FF2E4A72" FontWeight="Bold" Foreground="White" Click="NoDontRemoveButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
+
