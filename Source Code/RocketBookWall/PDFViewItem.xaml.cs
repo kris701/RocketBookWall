@@ -78,10 +78,13 @@ namespace RocketBookWall
                         string NewestFile = "";
                         foreach (string file in Files)
                         {
-                            if (NewestFile == "")
-                                NewestFile = file;
-                            if (File.GetLastWriteTime(file) > File.GetLastWriteTime(NewestFile))
-                                NewestFile = file;
+                            if (System.IO.Path.GetExtension(file) == ".pdf")
+                            {
+                                if (NewestFile == "")
+                                    NewestFile = file;
+                                if (File.GetLastWriteTime(file) > File.GetLastWriteTime(NewestFile))
+                                    NewestFile = file;
+                            }
                         }
 
                         if (LastUpdate != File.GetLastWriteTime(NewestFile))
